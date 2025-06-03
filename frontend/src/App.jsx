@@ -45,10 +45,11 @@ function Chat() {
     setInput('');
     setLoading(true);
     try {
+      const message = `State: ${selectedState}\nQuestion: ${input}`;
       const res = await fetch(`${API_URL}/api/chat`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ message: input })
+        body: JSON.stringify({ message })
       });
       const data = await res.json();
       setMessages(msgs => [...msgs, { role: 'assistant', content: data.answer }]);
