@@ -1,0 +1,131 @@
+body {
+  margin: 0;
+  font-family: 'Inter', Arial, sans-serif;
+  background: #fafbfc;
+  color: #222;
+}
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+header {
+  width: 100%;
+  padding: 2rem 0 1rem 0;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+  text-align: center;
+}
+header h1 {
+  margin: 0;
+  font-size: 2.2rem;
+  letter-spacing: 1px;
+  font-weight: 700;
+  color: #2d5a7e;
+}
+.examples {
+  margin: 1.5rem 0 0.5rem 0;
+  font-size: 1.1rem;
+  color: #666;
+  min-height: 2.2rem;
+}
+.example-text {
+  font-style: italic;
+  color: #2d5a7e;
+  margin-left: 0.5rem;
+}
+.chat-window {
+  width: 100%;
+  max-width: 420px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.07);
+  margin: 1rem 0 2rem 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 350px;
+}
+.messages {
+  flex: 1;
+  padding: 1rem;
+  overflow-y: auto;
+  max-height: 300px;
+}
+.msg {
+  margin-bottom: 0.7rem;
+  padding: 0.7rem 1rem;
+  border-radius: 8px;
+  max-width: 90%;
+  word-break: break-word;
+}
+.msg.user {
+  background: #e3f0fa;
+  align-self: flex-end;
+  color: #1a3a5d;
+}
+.msg.assistant {
+  background: #f3f3f3;
+  align-self: flex-start;
+  color: #333;
+}
+.chat-input {
+  display: flex;
+  border-top: 1px solid #eee;
+  padding: 0.5rem;
+  background: #fafbfc;
+}
+.chat-input input {
+  flex: 1;
+  border: none;
+  padding: 0.7rem;
+  border-radius: 6px;
+  font-size: 1rem;
+  background: #f5f7fa;
+  margin-right: 0.5rem;
+}
+.chat-input input:disabled {
+  background: #eee;
+}
+.chat-input button {
+  background: #2d5a7e;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 0.7rem 1.2rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.chat-input button:disabled {
+  background: #b0c4d4;
+  cursor: not-allowed;
+}
+footer {
+  width: 100%;
+  text-align: center;
+  margin-top: auto;
+  padding: 1.2rem 0 0.7rem 0;
+  font-size: 0.95rem;
+  color: #888;
+}
+.disclaimer {
+  margin-bottom: 0.3rem;
+}
+.credit {
+  font-size: 0.93rem;
+  color: #2d5a7e;
+}
+@media (max-width: 600px) {
+  .chat-window {
+    max-width: 98vw;
+    min-height: 250px;
+  }
+  header h1 {
+    font-size: 1.4rem;
+  }
+  .examples {
+    font-size: 0.98rem;
+  }
+} 
