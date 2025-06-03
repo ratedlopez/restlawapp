@@ -9,6 +9,8 @@ const EXAMPLES = [
   'How do I handle food allergies legally in Illinois?'
 ];
 
+const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001';
+
 function RotatingExamples() {
   const [index, setIndex] = useState(0);
   useEffect(() => {
@@ -43,7 +45,7 @@ function Chat() {
     setInput('');
     setLoading(true);
     try {
-      const res = await fetch('/api/chat', {
+      const res = await fetch(`${API_URL}/api/chat`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ message: input })
